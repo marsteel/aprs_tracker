@@ -8,6 +8,13 @@ This is a simple APRS tracker based on MicroAPRS
 * MicroAPRS modem with SimpleSerial firmware
 * Baofeng UV-5R
 * K Type 2pin Extension Cable for Kenwood BaoFeng
-# aprs_tracker
-# aprs_tracker
-# aprs_tracker
+
+Libraries
+* TinyGPS
+* SimpleTimer
+* SoftwareSerial
+* Wire
+* Arduino
+* U8x8lib
+* stdlib
+* SPI
