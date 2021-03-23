@@ -29,10 +29,10 @@ static const uint32_t GPSBaud = 9600; // TODO 9600 is too high, need to lower it
 bool screencleared = false;
 bool send_aprs_update = false;
 
-char charCallsign[] = "BH1RJC"; // Your callsign
+char charCallsign[] = "NOCALL"; // Your callsign
 char charSSID[] = "9"; // Your SSID
-char charCallsign_SSID[] = "BH1RJC-9"; // Your callsign-SSID
-String stringCallsign = "BH1RJC"; // Your callsign
+char charCallsign_SSID[] = "NOCALL-9"; // Your callsign-SSID
+String stringCallsign = "NOCALL"; // Your callsign
 String stringSSID = "9"; // Your SSID
 
 
@@ -122,10 +122,10 @@ void setup()
 
   //Print version
   Serial.println(F("APRS Tracker program"));
-  Serial.println(F("by BH1RJC"));
+  Serial.println(F("by NOCALL"));
   Serial.println();
   //APRS_init();
-  char myCALL[] = "BH1RJC";
+  char myCALL[] = "NOCALL";
   
   //initialMicroAPRS(); // initialize MicroARPS modem
 }
@@ -336,7 +336,7 @@ void loop()
         u8x8.refreshDisplay();    // only required for SSD1606/7
 
         setAprsUpdateFlag(); // We have valid GPS data, It is okay to send APRS packet.
-        char comment []= "BH1RJC APRS Tracker test";
+        char comment []= "NOCALL APRS Tracker test";
   }
 
   //Send raw packet to MicroModem
