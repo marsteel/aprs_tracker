@@ -341,12 +341,12 @@ void loop()
 
   //Send raw packet to MicroModem
   if(APRS_Send_Timer.isReady() and send_aprs_update ){    // If APRS interval timer is ready(>30sec) and it is okay to send aprs(GPS data is valid.)
-    Serial.print(F("!="));   // Construct Raw packet  !=ddmm.hhN/dddmm.hhE-PHG2410 An simple APRS tracker based on MicroAPRS
+    Serial.print(F("!="));   // Construct Raw packet  !=ddmm.hhN/dddmm.hhE-PHG2410 a simple APRS tracker based on MicroAPRS
                               // Read http://www.aprs.net/vm/DOS/PROTOCOL.HTM
     Serial.print(deg_to_nmea(lat, true));   // Insert LAT
     Serial.print(F("/"));
     Serial.print(deg_to_nmea(lon, false));  // Insert LONG
-    Serial.println(F(">PHG2410 An simple APRS tracker")); //  > = Car Insert PHG Power,ant/height/Gain, Symbol  and comment send_aprs_update
+    Serial.println(F(">PHG2410 a simple APRS tracker")); //  > = Car Insert PHG Power,ant/height/Gain, Symbol  and comment send_aprs_update
     send_aprs_update = false; // Reset APRS interval timer after send
     APRS_Send_Timer.reset(); // Reset APRS_Send_Timer
     drawSendIcon();  // Draw transmission icon
